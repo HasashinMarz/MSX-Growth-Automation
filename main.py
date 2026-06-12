@@ -15,7 +15,7 @@ import os
 from datetime import datetime
 
 from modules.env_config import load_environment, validate_env
-from modules.extractor import LeadExtractor
+from modules.extractor import PlaywrightLeadExtractor
 from modules.enricher import LeadEnricher
 from modules.delivery import LeadDelivery
 
@@ -103,7 +103,7 @@ def run_pipeline(args: argparse.Namespace) -> None:
 
     # ── Module 2 — Extraction ───────────────────────────────────────────────
     logger.info("\n[Module 2] Scraping leads…")
-    extractor = LeadExtractor(config=config)
+    extractor = PlaywrightLeadExtractor(config=config)
     raw_leads = extractor.scrape(query=args.query, limit=args.limit)
     logger.info(f"  ✓ Extracted {len(raw_leads)} raw leads")
 

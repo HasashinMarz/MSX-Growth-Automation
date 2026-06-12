@@ -1,0 +1,21 @@
+# MSX Growth Automation — Python Dependencies
+# Install: pip install -r requirements.txt
+
+# ── Core scraping ──────────────────────────────────────────────────────────
+requests==2.32.3
+beautifulsoup4==4.12.3
+lxml==5.2.2                  # fast HTML parser for BeautifulSoup
+
+# ── Optional: JS-rendered pages (comment out if not needed) ───────────────
+# playwright==1.44.0         # also run: playwright install chromium
+
+# ── Data processing ────────────────────────────────────────────────────────
+pandas==2.2.3
+
+# ── Google Sheets ─────────────────────────────────────────────────────────
+gspread==6.1.2
+google-auth==2.30.0
+google-auth-oauthlib==1.2.0
+
+# ── Environment & config ───────────────────────────────────────────────────
+python-dotenv==1.0.1

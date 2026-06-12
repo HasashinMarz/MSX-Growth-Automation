@@ -11,12 +11,17 @@ Usage:
 import argparse
 import sys
 import logging
+import os
 from datetime import datetime
 
 from modules.env_config import load_environment, validate_env
 from modules.extractor import LeadExtractor
 from modules.enricher import LeadEnricher
 from modules.delivery import LeadDelivery
+
+# ── Directory Setup ────────────────────────────────────────────────────────
+os.makedirs("logs", exist_ok=True)
+os.makedirs("output", exist_ok=True)
 
 # ── Logging ────────────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -136,10 +141,6 @@ def run_pipeline(args: argparse.Namespace) -> None:
 
 # ── Entry ───────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    import os
-    os.makedirs("logs", exist_ok=True)
-    os.makedirs("output", exist_ok=True)
-
     parser = build_parser()
     args = parser.parse_args()
     run_pipeline(args)

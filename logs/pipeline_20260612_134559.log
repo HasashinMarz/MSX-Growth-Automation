@@ -1,0 +1,20 @@
+2026-06-12 13:45:59,590 [INFO] msx.main — ══════════════════════════════════════════
+2026-06-12 13:45:59,590 [INFO] msx.main —  MSX Growth Automation Pipeline — START  
+2026-06-12 13:45:59,591 [INFO] msx.main — ══════════════════════════════════════════
+2026-06-12 13:45:59,591 [INFO] msx.main — Query    : plumbers in Nairobi
+2026-06-12 13:45:59,591 [INFO] msx.main — Limit    : 5
+2026-06-12 13:45:59,591 [INFO] msx.main — Enricher : apollo
+2026-06-12 13:45:59,592 [INFO] msx.main — Sheet    : MSX Growth Leads / Leads
+2026-06-12 13:45:59,592 [INFO] msx.main — 
+[Module 1] Loading environment…
+2026-06-12 13:45:59,594 [INFO] msx.env_config —   ✓ All environment variables validated
+2026-06-12 13:45:59,594 [INFO] msx.main — 
+[Module 2] Scraping leads…
+2026-06-12 13:45:59,595 [INFO] msx.extractor —   Search terms: 'plumbers' | Location: 'Nairobi'
+2026-06-12 13:45:59,709 [WARNING] msx.extractor —   [yellowpages] HTTP 403 for https://www.yellowpages.com/search?search_terms=plumbers&geo
+2026-06-12 13:45:59,709 [INFO] msx.extractor —   YellowPages → 0 leads
+2026-06-12 13:46:00,538 [WARNING] msx.extractor —   [duckduckgo] HTTP 202 for https://html.duckduckgo.com/html/?q=plumbers+in+Nairobi+offi
+2026-06-12 13:46:00,538 [INFO] msx.extractor —   Google snippets → 0 leads
+2026-06-12 13:46:00,538 [INFO] msx.extractor —   After dedup: 0 unique leads
+2026-06-12 13:46:00,539 [INFO] msx.main —   ✓ Extracted 0 raw leads
+2026-06-12 13:46:00,539 [WARNING] msx.main — No leads found — check your query or scraping target.
